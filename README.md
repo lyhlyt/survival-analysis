@@ -24,8 +24,7 @@ relevel(mydata$edu_group,ref=1)
 relevel(mydata$marital_group ,ref=1)
 
 #formula
-S<-Surv(time_year, status)~age_group+edu_group+marital_group+new_coreceptor+
-                           subtype+partner+CD4
+S<-Surv(time_year, status)~age_group+edu_group+marital_group
 
 #fit COX regression model
 f<-coxph(S,data = mydata)
